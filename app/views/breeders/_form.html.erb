@@ -1,11 +1,19 @@
 <%= form_for @breeder do |f| %>
+  <div class="form-group">
   <%= f.label :name %>
-  <%= f.text_field :name, :required => true %>
+  <%= f.text_field :name, :required => true, :class => 'form-control' %>
+  </div>
+  <div class="form-group"> 
   <%= f.label :city %>
-  <%= f.text_field :city %>
+  <%= f.text_field :city, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
   <%= f.label 'state' %>
-  <%= f.text_field :state, :placeholder => 'NSW' %>
+  <%= f.text_field :state, :placeholder => 'NSW', :class => 'form-control' %>
+  </div>
+  <div class="form-group">
   <%= f.label :photo %>
-  <%= f.url_field :photo %>
+  <%= f.url_field :photo, :class => 'form-control' %>
+  </div>
   <%= f.submit %>
 <% end %>

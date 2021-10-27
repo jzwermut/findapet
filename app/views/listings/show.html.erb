@@ -1,19 +1,26 @@
-<h1> <%= @listing.name %> </h1>
-
-<%= image_tag @listing.image if @listing.image.present? %>
-
-<div class="container">
-<ul>
-<li> <%= @listing.price %> </li> 
-<li> <%= @listing.availability  %> </li> 
-<li> <%= @listing.description %> </li>
-<% if @listing.breeder.present? %>
-<li> Breeder: <%= link_to @listing.breeder.name, breeder_path(@breeder_id) %> </li>
-</ul>
+<div class="card mb-3">
+	<% if @listing.image.present? %>
+	<%= image_tag @listing.image, :class => 'card-img-top listing-view' %>
+	<% end %>
+<!--   <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+  <div class="card-body">
+    <h3 class="card-title"><%= @listing.name %></h3>
+    <ul>
+		<li> Price $<%= @listing.price %> </li> 
+		<li> Available? <%= @listing.availability  %> </li> 
+		<% if @listing.breeder.present? %>
+		<li> Breeder: <%= link_to @listing.breeder.name, breeder_path(@breeder_id) %> </li>
+		<% end %>
+	</ul>
+    <p class="card-text"> <%= @listing.description %></p>
+    <button type="button" class="btn btn-primary btn-lg btn-block"> <%= "Enquire about #{@listing.name}" %> </button>
+    
+    <% if @extras == true %>
+    <%= link_to 'Edit', edit_listing_path %>
+    <br>
+    <%= link_to 'Delete', @listing, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+    <% end %>
+  </div>
 </div>
-<% end %>
 
-<% if @current_user.present? && @current_user.isBreeder? %>
-<%= link_to 'Edit listing', edit_listing_path %>
-<%= link_to 'Delete listing', @listing, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
-<% end %>
+<%= link_to 'Back to all pups', listings_path %>

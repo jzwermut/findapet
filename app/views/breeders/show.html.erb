@@ -1,14 +1,14 @@
-<h2> <%= @breeder.name %></h2>
-
-<ul class="list-group">
-<li class="list-group-item"> <%= @breeder.city %> </li> 
-<li class="list-group-item"> <%= @breeder.state %> </li> 
-<li class="list-group-item"> <%= image_tag @breeder.photo %> </li>
-</ul>
-
-<br>
-
-<h2>Our breeds </h2>
+<div class="card mb-3">
+	<% if @breeder.photo.present? %>
+	<%= image_tag @breeder.photo, :class => 'card-img-top breeder-view' %>
+	<% end %>
+<!--   <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+  <div class="card-body">
+    <h3 class="card-title"><%= @breeder.name %></h3>
+    <ul>
+		<li> Location <%= @breeder.city %>, <%= @breeder.state %> </li> 
+	</ul>
+	<h2>Our breeds </h2>
 <% @breeder.breeds.each do |breed| %>
 <ul class = "list-group">
 <li class="list-group-item"> <%= breed.name %> </li>
@@ -17,7 +17,10 @@
 <li class="list-group-item"> <%= image_tag breed.photo %> </li>
 <% end %>
 <% end %>
-</ul>
+</ul>	
+  </div>
+</div>
+<%= link_to 'Back to all breeders', breeders_path %>
 
 <% if @current_user.present? && @current_user.isBreeder? %>
 <%= link_to 'Edit breeder', edit_breeder_path %>

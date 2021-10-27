@@ -1,0 +1,9 @@
+<h1>Breeds</h1>
+
+<% @breeds.each do |breed| %>
+	 <p> <%= link_to breed.name, breed %> </p>
+	<% end %>
+
+<% if @breed != Breed.all %>
+<%= link_to 'Add breed', new_breed_path %>
+<% end %>

@@ -1,5 +1,54 @@
-<!-- <h1>Welcome to FindaPet</h1> -->
-  <%= image_tag 'hero.jpg' %>
-<!--  <% if @current_user.present? %> -->
-<!--   <h2>Welcome back <%= @current_user.first_name %></h2> -->
-<!-- <% end %> -->
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag 'hero.jpg', :class => "d-block w-100", :alt => 'First slide' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>The home of puppicinos</h1>
+        <h2>Find your Fido</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'hero2.jpg', :class => "d-block w-100", :alt => 'Second slide' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Only registered breeders</h1>
+        <h2>Animal welfare comes first</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'hero4.jpg', :class => "d-block w-100", :alt => 'Third slide' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Message breeders directly</h1>
+        <h2>Coming soon</h2>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="card mb-3 home-cards">
+  <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+  <div class="card-body">
+    <h5 class="card-title">Australia's best breeders</h5>
+    <p class="card-text">Getting a puppy is an exciting time and you can have peace of mind that your puppy is healthy and happy.</p>
+  </div>
+   <%= image_tag 'homeCard1.jpg', :class => "card-img-bottom home-card" %>
+</div>
+<div class="card home-cards">
+  <div class="card-body">
+    <h5 class="card-title">Happy owners, happy dogs</h5>
+    <p class="card-text">We've found happy homes for over 2000 pups from more than 100 breeders.</p>
+  </div>
+  <%= image_tag 'homeCard2.jpg', :class => "card-img-bottom home-card"%>
+</div>

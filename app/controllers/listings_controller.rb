@@ -11,6 +11,11 @@ end
 def show
 	@listing = Listing.find params[:id]
 	@breeder_id = @listing.breeder.id
+	if @current_user.present? && @current_user.isBreeder?
+		@extras = true
+	else
+		@extras = false
+	end
 end
 
 def new
