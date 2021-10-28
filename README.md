@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Findapet is a website for breeders to create a profile for themselves and create listings.
 
-Things you may want to cover:
+A user can have multiple breeder businesses listed.
 
-* Ruby version
+A breeder can have multiple listings and breeds associated.
 
-* System dependencies
+Anyone who visits the site can view all listings and breeders but has no add,edit or delete functionality.
 
-* Configuration
+Breeders can manage their own business profiles and listings.
 
-* Database creation
+Check it out at https://findapetwithjwow.herokuapp.com/
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
