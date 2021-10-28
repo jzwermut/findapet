@@ -21,7 +21,10 @@
   </div>
   <div class="form-group">
   <%= f.label :breeder_id %>
-  <%= f.select :breeder_id, @myBreeders.pluck(:name, :id), :include_blank => true, :class => 'form-control'  %>
+  <%= f.collection_select :breeder_id, @myBreeders.order(:name), :id, :name, :include_blank => true, :class => 'form-control'  %>
+  </div>
+  <%= f.label :breed_id %>
+  <%= f.grouped_collection_select :breed_id, @myBreeders.order(:name), :breeds, :name, :id, :name, :include_blank => true, :class => 'form-control'%>
   </div>
   <%= f.submit %>
 <% end %>

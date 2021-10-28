@@ -1,3 +1,12 @@
 <h1> <%= @breed.name %> </h1>
+<% if @breed.photo.present? %>
+<li class="list-group-item"> <%= image_tag @breed.photo %> </li>
+<% end %>
 <p> <%= "The #{@breed.name} family of dogs hails from #{@breed.origin}" %> </p>
+
+<% if @current_user.present? && @current_user.isBreeder? %>
+<%= link_to 'Edit', edit_breed_path %>
+<%= link_to 'Delete', @breed, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+<% end %>
+<br>
 <%= link_to "Back to all breeds", breeds_path %>

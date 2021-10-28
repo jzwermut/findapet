@@ -21,6 +21,7 @@ end
 def new
 	@listing = Listing.new
 	@myBreeders = @current_user.breeders
+	@myBreeds = Breed.all
 end
 
 def create
@@ -31,6 +32,7 @@ end
 def edit
 	@listing = Listing.find params[:id]
 	@myBreeders = @current_user.breeders
+	@myBreeds = Breed.all
 end
 
 def update
