@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for @breeder do |f| %>
   <div class="form-group">
   <%= f.label :name %>
@@ -15,5 +16,6 @@
   <%= f.label :photo %>
   <%= f.url_field :photo, :class => 'form-control' %>
   </div>
-  <%= f.submit %>
+  <%= f.submit :class => "btn btn-primary"%>
 <% end %>
+</div>
