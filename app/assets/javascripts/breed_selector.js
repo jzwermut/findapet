@@ -1,6 +1,6 @@
 $(document).ready (function() {
 
-	const breeds = $('#listing_breed_id').html();
+	var breeds = $('#listing_breed_id').html();
 	$('#listing_breed_id').empty();
 	$('#listing_breeder_id').change(function() {
 		let breeder = $('#listing_breeder_id option:selected').text();
