@@ -36836,3 +36836,324 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 93ms (Views: 81.7ms | ActiveRecord: 7.6ms)
 
 
+Started GET "/listings" for ::1 at 2021-10-28 19:29:28 +1100
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (4.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "breeders" ON "listings"."breeder_id" = "breeders"."id" INNER JOIN "breeders_users" ON "breeders"."id" = "breeders_users"."breeder_id" WHERE "breeders_users"."user_id" = $1[0m  [["user_id", 69]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mBreeder Load (2.2ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (2.5ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mBreeder Load (0.3ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.3ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.5ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  Rendered listings/index.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 245ms (Views: 216.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/" for ::1 at 2021-10-28 19:29:30 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 256ms (Views: 250.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/listings" for ::1 at 2021-10-28 19:29:35 +1100
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (4.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "breeders" ON "listings"."breeder_id" = "breeders"."id" INNER JOIN "breeders_users" ON "breeders"."id" = "breeders_users"."breeder_id" WHERE "breeders_users"."user_id" = $1[0m  [["user_id", 69]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mBreeder Load (0.9ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.6ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mBreeder Load (0.4ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.5ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.4ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  Rendered listings/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 402ms (Views: 389.0ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/login" for ::1 at 2021-10-28 19:29:42 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1ZvC4s5CrqwlDcf53JhiLuVAsyYwaUc8XT4BIgD6G2keJ7sAGAkhBaIr/TBeoDtoJnQcosUnq4scwihGWaOH4w=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2021-10-28 19:29:42 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/listings" for ::1 at 2021-10-28 19:29:44 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mBreeder Load (0.4ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreeder Load (0.6ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.4ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mBreeder Load (0.7ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreeder Load (0.8ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.1ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.4ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.5ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mBreeder Load (0.4ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (1.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.1ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breed Load (0.0ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mCACHE Breeder Load (0.0ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:16
+  [1m[36mBreed Load (0.3ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:18
+  Rendered listings/index.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 632ms (Views: 623.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/login" for ::1 at 2021-10-28 19:32:02 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 92ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-10-28 19:32:13 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YLqc75737TPITp8JbjSjMsG2xnLYX9mBfKSWG7zRNKurBuUNSLximk9opcDsDPp0AoJp9i0RNTY9WL9/5YioIQ==", "email"=>"bob@smith.com", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bob@smith.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 1314ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-10-28 19:32:14 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 702ms (Views: 688.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/breeders" for ::1 at 2021-10-28 19:32:27 +1100
+Processing by BreedersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering breeders/index.html.erb within layouts/application
+  [1m[36mBreeder Load (0.9ms)[0m  [1m[34mSELECT "breeders".* FROM "breeders" INNER JOIN "breeders_users" ON "breeders"."id" = "breeders_users"."breeder_id" WHERE "breeders_users"."user_id" = $1[0m  [["user_id", 69]]
+  ↳ app/views/breeders/index.html.erb:3
+  [1m[36mBreeder Load (0.6ms)[0m  [1m[34mSELECT "breeders".* FROM "breeders"[0m
+  ↳ app/views/breeders/index.html.erb:7
+  Rendered breeders/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 129ms (Views: 121.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/breeders/70" for ::1 at 2021-10-28 19:32:29 +1100
+Processing by BreedersController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBreeder Load (0.4ms)[0m  [1m[34mSELECT  "breeders".* FROM "breeders" WHERE "breeders"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/breeders_controller.rb:12
+  Rendering breeders/show.html.erb within layouts/application
+  [1m[36mBreed Load (2.6ms)[0m  [1m[34mSELECT "breeds".* FROM "breeds" INNER JOIN "breeders_breeds" ON "breeds"."id" = "breeders_breeds"."breed_id" WHERE "breeders_breeds"."breeder_id" = $1[0m  [["breeder_id", 70]]
+  ↳ app/views/breeders/show.html.erb:12
+  Rendered breeders/show.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 188ms (Views: 178.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/breeds/56" for ::1 at 2021-10-28 19:32:33 +1100
+Processing by BreedsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBreed Load (0.4ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/breeds_controller.rb:8
+  Rendering breeds/show.html.erb within layouts/application
+  Rendered breeds/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 101ms (Views: 94.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/breeds/56/edit" for ::1 at 2021-10-28 19:32:38 +1100
+Processing by BreedsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBreed Load (0.4ms)[0m  [1m[34mSELECT  "breeds".* FROM "breeds" WHERE "breeds"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/breeds_controller.rb:22
+  Rendering breeds/edit.html.erb within layouts/application
+  Rendered breeds/_form.html.erb (24.5ms)
+  Rendered breeds/edit.html.erb within layouts/application (30.9ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `order' for nil:NilClass):
+    18:     </div>
+    19:     <div class="form-group">
+    20:     <%= f.label :breeder_id %>
+    21:     <%= f.collection_select :breeder_ids, @myBreeders.order(:name), :id, :name, :include_blank => true, :class => 'form-control'  %>
+    22:     </div>
+    23:     <%= f.submit :class => "btn btn-primary"%>
+    24:   <% end %>
+  
+app/views/breeds/_form.html.erb:21:in `block in _app_views_breeds__form_html_erb___1086094590950138514_256180'
+app/views/breeds/_form.html.erb:2:in `_app_views_breeds__form_html_erb___1086094590950138514_256180'
+app/views/breeds/edit.html.erb:2:in `_app_views_breeds_edit_html_erb__997233213082743629_256160'
+Started DELETE "/login" for ::1 at 2021-10-28 19:38:58 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BhE8dXAKQbUROoYZAqBDQ/XsrTDmbANbiLt+I/+rd/vNrUWXpkHOHJYcvNCAmBoFNtgCtBMi7+zJR1dHpvLrcQ=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for ::1 at 2021-10-28 19:38:58 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-10-28 19:39:00 +1100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jonathanwermut/Projects/findapetV2/app/views/users/new.html.erb:36: syntax error, unexpected ':', expecting ')'
+....append=( f.submit "Sign up!" :class => "btn btn-primary" );...
+...                              ^
+):
+  
+app/views/users/new.html.erb:36: syntax error, unexpected ':', expecting ')'
+Started GET "/users/new" for ::1 at 2021-10-28 19:39:19 +1100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
