@@ -20,6 +20,7 @@ end
 
 def edit
 	@breed = Breed.find params[:id]
+  @myBreeders = @current_user.breeders
 end
 
 def update
